@@ -3,36 +3,43 @@
 #include <stdint.h>
 #include <string.h>
 
-// def de lien entre les machines (arete)
-struct lien {
-    machine machine_1;
-    machine machine_2;
-}lien;
+#include "station.h"
+#include "switch.h"
 
 // def enumeration de machine, pour test le type de l'union machine_u
-typedef enum machine_t{
+typedef enum machine_e{
   TYPE_STATION ,
   TYPE_SWITCH 
-} machine_t;
+} machine_e;
 
 // def union de type station et type switch
 typedef union machine_u {
     station station;
-    switch switch;
+    switch_t switchs;
 }machine_u ;
 
 //def structure qui joint les types station et switch
-typedef struct machine{
-    machine_t type;
+typedef struct machine_t{
+    machine_e type;
     machine_u donnee;
-}machine;
+}machine_t;
+
+
+// def de lien entre les machines (arete)
+typedef struct lien {
+    machine_t machine_1;
+    machine_t machine_2;
+}lien;
+
+
+
 
 // def reseau (graphe)
 typedef struct reseau{
     uint8_t nb_machine;
     uint8_t nb_lien;
     uint8_t lien_capacite;
-    machine* tabMachine;
+    machine_t* tabMachine;
     // tab[0].type = TYPE_STATION
     // tab[0].donnee.station.adrMac =...
     // tab[0].donnee.station.adrIP=...
@@ -46,14 +53,14 @@ typedef struct reseau{
 
 }reseau;
 
-void initReseau(reseau* r)
-void deinitReseau(reseau* r)
+void initReseau(reseau* r);
+void deinitReseau(reseau* r);
 
-uint8_t getNombreMachine(reseau* const r)
-uint8_t getNombreConnexion(reseau* const r)
+uint8_t getNombreMachine(reseau* const r);
+uint8_t getNombreConnexion(reseau* const r);
 
-void ajouterMachine (reseau* const r, machine m)
-bool existeLien (reseau* const r, lien l)
-void ajouterLien (reseau* const r, lien l)
+void ajouterMachine (reseau* const r, machine_t m);
+bool existeLien (reseau* const r, lien l);
+void ajouterLien (reseau* const r, lien l);
 
-void initLien(machine m1, machine m2)
+void initLien(machine_t m1, machine_t m2);

@@ -3,6 +3,7 @@
         "station.h": "c",
         "mac.h": "c",
         "ip.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "string.h": "c"
     }
 }

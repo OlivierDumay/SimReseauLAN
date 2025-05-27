@@ -4,7 +4,7 @@
 #include "mac.h"
 #include "ip.h"
 
-typedef struct {
+typedef struct station{
     mac adrMac;
     ip adrIp;
 } station;

@@ -23,8 +23,8 @@ uint8_t getNombreConnexion(reseau* const r)
     return r->nb_lien;
 }
 
-void ajouterMachine (reseau* r, machine m)
-bool existeLien (reseau* const g, lien l)
-void ajouterLien (reseau* r, lien l)
+//void ajouterMachine (reseau* r, machine_t m)
+//bool existeLien (reseau* const g, lien l)
+//void ajouterLien (reseau* r, lien l)
 
-void initLien(machine m1, machine m2)
+//void initLien(machine_t m1, machine_t m2)
