@@ -6,6 +6,8 @@
 #include <stdio.h>  // Pour printf
 #include <stdbool.h> // Pour bool
 
+#include "traduction.h"
+
 typedef int8_t ip[4];
 
 // Affiche l'adresse IP (format : a.b.c.d)

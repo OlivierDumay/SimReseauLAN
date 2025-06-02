@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"station.h": "c",
+			"mac.h": "c",
+			"ip.h": "c",
+			"stdio.h": "c",
+			"string.h": "c",
+			"reseau.h": "c",
+			"switch.h": "c",
+			"stdint.h": "c"
+		}
+	}
+}
