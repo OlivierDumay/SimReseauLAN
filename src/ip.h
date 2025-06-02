@@ -14,7 +14,7 @@ typedef int8_t ip[4];
 void afficherIP(ip adr);
 
 // Affichage sans possibilité de modification grâce à const
-void lireIP(const char* ligne);
+void lireIP(const char* ligne, ip adr);
 
 // Retourne une chaîne (char*) représentant l'adresse IP (à libérer par l'appelant)
 char* ecrireIP(ip adr);
